@@ -2,7 +2,7 @@
 
 # The back-and-forth method
 
-This page provides documentation for the source code used in the paper [A fast approach to optimal transport: The back-and-forth method](https://arxiv.org/pdf/1905.12154.pdf) [1]. The original code was written in C here we provide a MATLAB wrapper to the C code.
+This page provides documentation for the source code used in the paper [A fast approach to optimal transport: The back-and-forth method](https://arxiv.org/pdf/1905.12154.pdf) [1]. The original code was written in C, here we provide a MATLAB wrapper to the C code.
 
 
 
