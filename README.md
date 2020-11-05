@@ -101,7 +101,7 @@ title('Final density')
 ```
 
 
-![Initial and final densities](densities1.png)
+![Initial and final densities](doc/densities1.png)
 	
 
 Here the densities are renormalized so that 
