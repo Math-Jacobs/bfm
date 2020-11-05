@@ -2,14 +2,14 @@
 
 # The back-and-forth method
 
-This page provides documentation for the source code used in the paper [A fast approach to optimal transport: The back-and-forth method](https://arxiv.org/pdf/1905.12154.pdf) [1]. The original code was written in C, here we provide a MATLAB wrapper to the C code.
+This page provides documentation for the source code used in the paper [A fast approach to optimal transport: The back-and-forth method](https://arxiv.org/pdf/1905.12154.pdf) [1]. The original code was written in C and we provide here a MATLAB wrapper to the C code.
 
 
 
 # Introduction
 
 
-We are interested in solving the optimal transport problem
+We are interested in the optimal transport problem
 
 
 <!-- $$
@@ -19,7 +19,7 @@ $$ -->
 <div align="center"><img src="https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle%20%5Cfrac%201%202%20W_%7B%5C!2%7D%5E2(%5Cmu%2C%5C!%5Cnu)%3D%5Cmin_%7BT_%7B%5C%23%7D%5Cmu%3D%5Cnu%7D%20%5Cint_%7B%5COmega%7D%20%5Cfrac%201%202%20%5ClVert%20T(x)-x%5CrVert%5E2%20%5C%2C%5Cmu(x)dx%2C"></div>
 
 
-on the unit square <!-- $\Omega=[0,1]^2$ --> <img src="https://render.githubusercontent.com/render/math?math=%5COmega%3D%5B0%2C1%5D%5E2">. Here <!-- $\mu$ --> <img src="https://render.githubusercontent.com/render/math?math=%5Cmu"> and <!-- $\nu$ --> <img src="https://render.githubusercontent.com/render/math?math=%5Cnu"> are two densities on <!-- $\Omega$ --> <img src="https://render.githubusercontent.com/render/math?math=%5COmega"> with the same total mass, and  <!-- $\lVert x-y\rVert^2=(x_1-y_1)^2+(x_2-y_2)^2$ --> <img src="https://render.githubusercontent.com/render/math?math=%5ClVert%20x-y%5CrVert%5E2%3D(x_1-y_1)%5E2%2B(x_2-y_2)%5E2">. 
+on the unit square <!-- $\Omega=[0,1]^2$ --> <img src="https://render.githubusercontent.com/render/math?math=%5COmega%3D%5B0%2C1%5D%5E2">. Here <!-- $\mu$ --> <img src="https://render.githubusercontent.com/render/math?math=%5Cmu"> and <!-- $\nu$ --> <img src="https://render.githubusercontent.com/render/math?math=%5Cnu"> are two densities on <!-- $\Omega$ --> <img src="https://render.githubusercontent.com/render/math?math=%5COmega">, and  <!-- $\lVert x-y\rVert^2=(x_1-y_1)^2+(x_2-y_2)^2$ --> <img src="https://render.githubusercontent.com/render/math?math=%5ClVert%20x-y%5CrVert%5E2%3D(x_1-y_1)%5E2%2B(x_2-y_2)%5E2">. 
 
 
 The code solves the dual Kantorovich problem
@@ -43,7 +43,7 @@ $$ -->
 
 Requirements: FFTW ([download here](http://www.fftw.org/)), MATLAB.
 
-Download the C MEX file `w2.c` by cloning the GitHub repository.
+Download the C MEX file `w2.c` [here](lalala) or by cloning the GitHub repository.
 
 Compile it: in a MATLAB session run
 ```matlab
@@ -74,12 +74,12 @@ Output:
 
 Example 1
 =========
-Let us first compute the optimal transport between the characterstic function of a disk and its translate. We discretize the problem with ~1 million points (<!-- $1024\times 1024$ --> <img src="https://render.githubusercontent.com/render/math?math=1024%5Ctimes%201024">).
+Let us first compute the optimal transport between the characteristic function of a disk and its translate. We discretize the problem with ~1 million points (<!-- $1024\times 1024$ --> <img src="https://render.githubusercontent.com/render/math?math=1024%5Ctimes%201024">).
 
 ```matlab
 n = 1024;
 
-[x,y] = meshgrid(linspace(0.5/n, 1-0.5/n, n));
+[x, y] = meshgrid(linspace(0.5/n, 1-0.5/n, n));
 
 mu = zeros(n);
 idx = (x-0.25).^2 + (y-0.25).^2 < 0.125^2;
@@ -124,7 +124,7 @@ numIters = 10;
 sigma = 8.0 / max(max(mu(:)), max(nu(:)));
 
 tic;
-[phi,psi] = w2(mu, nu, numIters, sigma);
+[phi, psi] = w2(mu, nu, numIters, sigma);
 toc
 ```
 
@@ -146,7 +146,7 @@ We discretize the problem with ~1 million points (<!-- $1024\times 1024$ --> <im
 ```matlab
 n = 1024;
 
-[x,y] = meshgrid(linspace(0,1,n));
+[x, y] = meshgrid(linspace(0,1,n));
 
 mu = peaks(n);
 mu = mu - min(mu(:));
@@ -173,7 +173,7 @@ numIters = 20;
 sigma = 8.0 / max(max(mu(:)), max(nu(:)));
 
 tic;
-[phi,psi] = w2(mu, nu, numIters, sigma);
+[phi, psi] = w2(mu, nu, numIters, sigma);
 toc
 ```
 Output:
@@ -186,7 +186,7 @@ Output:
 	iter 20, W2 value: 9.793362e-04
 	Elapsed time is 10.016858 seconds.
 
-Finally compute the optimal transport map 
+Finally consider the optimal transport map 
 
 <!-- $$
 T(x)=x-\nabla\psi(x)
@@ -207,8 +207,8 @@ set(gca,'YDir','normal')
 hold on
 s = 64;
 quiver(x(1:s:end,1:s:end), y(1:s:end,1:s:end), ...
-            mx(1:s:end,1:s:end), my(1:s:end,1:s:end), ...
-                0, 'Color','k');
+       mx(1:s:end,1:s:end), my(1:s:end,1:s:end), ...
+       0, 'Color','k');
 ```
 
 
