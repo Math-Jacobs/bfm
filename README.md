@@ -164,7 +164,7 @@ surf(x(1:s:end,1:s:end), y(1:s:end,1:s:end), nu(1:s:end,1:s:end))
 title('Final density')
 ```
 	
-![Initial and final densities](matlab_densities.png)
+![Initial and final densities](doc/matlab_densities.png)
 
 Then run the back-and-forth solver:
 
@@ -213,7 +213,7 @@ quiver(x(1:s:end,1:s:end), y(1:s:end,1:s:end), ...
 
 
 
-![Optimal map](matlab_quiver.png)
+![Optimal map](doc/matlab_quiver.png)
 
 
 
