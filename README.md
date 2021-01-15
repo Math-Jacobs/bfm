@@ -111,7 +111,7 @@ $$ -->
 
 <div align="center"><img src="https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle%20%5Cint_%5COmega%5Cmu(x)dx%3D%5Cint_%5COmega%5Cnu(x)dx%3D1."></div> 
 
-Note that <!-- $\nu$ --> <img src="https://render.githubusercontent.com/render/math?math=%5Cnu">  is the translate of <!-- $\mu$ --> <img src="https://render.githubusercontent.com/render/math?math=%5Cmu"> by the vector <!-- $(1/2, 1/2)$ --> <img src="https://render.githubusercontent.com/render/math?math=(1%2F2%2C%201%2F2)">, and therefore 
+Note that <!-- $\nu$ --> <img src="https://render.githubusercontent.com/render/math?math=%5Cnu">  is the translate of <!-- $\mu$ --> <img src="https://render.githubusercontent.com/render/math?math=%5Cmu"> by the vector <!-- $(1/2, 1/2)$ --> <img src="https://render.githubusercontent.com/render/math?math=(1%2F2%2C%201%2F2)"> and therefore 
 
 <!-- $$
 \displaystyle\frac 1 2 W_{\!2}^2(\mu,\!\nu)=\frac 1 4.
