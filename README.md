@@ -43,7 +43,7 @@ $$ -->
 
 Requirements: FFTW ([download here](http://www.fftw.org/)), MATLAB.
 
-Download the C MEX file `w2.c` [here](lalala) or by cloning the GitHub repository.
+Download the C MEX file `w2.c` [here](https://raw.githubusercontent.com/Math-Jacobs/bfm/main/w2.c) or by cloning the GitHub repository.
 
 Compile it: in a MATLAB session run
 ```matlab
