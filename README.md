@@ -15,7 +15,7 @@ Available here: <https://back-and-forth.netlify.app>.
 
 Requirements: FFTW ([download here](http://www.fftw.org/)), MATLAB.
 
-Download the C MEX file `w2.c` [here](lalala) or clone this GitHub repository.
+Download the C MEX file `w2.c` [here](https://raw.githubusercontent.com/Math-Jacobs/bfm/main/w2.c) or by cloning the GitHub repository.
 
 Compilation: in a MATLAB session run
 ```matlab
