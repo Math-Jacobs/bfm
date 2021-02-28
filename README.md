@@ -14,7 +14,7 @@ Available here: <https://back-and-forth.netlify.app>.
 
 ## Installation
 
-The simplest way to use the Python code is to [run the notebook on Google Colab](XXX). 
+The simplest way to use the Python code is to [run this notebook on Google Colab](https://colab.research.google.com/drive/1Uml2n4MIVDZnviEHEMFrJIdMwYDOPHax?usp=sharing). 
 
 The notebook is also available here as `example.ipynb`.
 
