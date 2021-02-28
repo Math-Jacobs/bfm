@@ -2,7 +2,7 @@
 
 # The back-and-forth method in optimal transport
 
-This repository contains the source code used in the paper [A fast approach to optimal transport: The back-and-forth method](https://arxiv.org/pdf/1905.12154.pdf) [1]. The original code was written in C and we provide here a MATLAB wrapper to the C code.
+This repository contains the source code used in the paper [A fast approach to optimal transport: The back-and-forth method](https://arxiv.org/pdf/1905.12154.pdf) [1]. The original code was written in C and we provide here a Python and a MATLAB wrapper to the C code.
 
 
 
@@ -10,12 +10,32 @@ This repository contains the source code used in the paper [A fast approach to o
 Available here: <https://back-and-forth.netlify.app>.
 
 
+# Python
 
-# Installation
+## Installation
+
+The simplest way to use the Python code is to [run the notebook on Google Colab](XXX). 
+
+The notebook is also available here as `example.ipynb`.
+
+Alternatively, to install the Python bindings on your machine, first clone the the GitHub repository and then install the Python bindings by running
+```
+pip install ./bfm/python
+```
+
+## Usage
+See the Jupyter notebook `example.ipynb` or directly run `example.py`.
+
+
+
+
+# MATLAB
+
+## Installation
 
 Requirements: FFTW ([download here](http://www.fftw.org/)), MATLAB.
 
-Download the C MEX file `w2.c` [here](https://raw.githubusercontent.com/Math-Jacobs/bfm/main/w2.c) or by cloning the GitHub repository.
+Download the C MEX file `w2.c` [here](https://raw.githubusercontent.com/Math-Jacobs/bfm/main/matlab/w2.c) or clone the GitHub repository and navigate to the `matlab/` folder.
 
 Compilation: in a MATLAB session run
 ```matlab
@@ -25,7 +45,7 @@ This will produce a MEX function `w2` that you can use in MATLAB. You may need t
 
 
 
-# Usage
+## Usage
 
 In a MATLAB session, run the command
 ```matlab
